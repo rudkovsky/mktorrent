@@ -86,9 +86,8 @@ class Torrent
     open(filename, 'wb') do |torrentfile|
       torrentfile.write self.to_s
     end
-    torrent_file = "#{`pwd`.chomp}/#{filename}"
-    puts "Wrote #{torrent_file}"
-    torrent_file
+    puts "Wrote #{filename}"
+    filename
   end
 
   # Return the .torrent file as a string
